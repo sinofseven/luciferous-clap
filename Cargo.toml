@@ -1,9 +1,15 @@
 [package]
-name = "rust-pj-template"
-version = "0.1.0"
+name = "luciferous-clap"
+version = "2.33.3"
 authors = ["sinofseven <em.s.00001@gmail.com>"]
 edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+description = "my unoficial clap wrapper"
+repository = "https://github.com/sinofseven/luciferous-clap"
+license = "MIT"
+readme = "README.md"
+
 [dependencies]
+clap = "2.33.3"

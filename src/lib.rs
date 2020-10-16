@@ -1,11 +1,8 @@
 pub use clap;
 use clap::{App, ArgMatches};
 
-pub trait CommandBase {
-    type Response;
-    type Error;
-
+pub trait SubCommand<R, E> {
     const NAME: &'static str;
     fn subcommand<'a, 'b>() -> App<'a, 'b>;
-    fn run(args: &ArgMatches) -> Result<Self::Response, Self::Error>;
+    fn run(args: &ArgMatches) -> Result<R, E>;
 }
